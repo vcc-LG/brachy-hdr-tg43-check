@@ -1,0 +1,5 @@
+numpy==1.11.2
+scipy==0.18.1
+pyodbc==3.0.10
+pydicom==0.9.9
+tabulate==0.7.5
