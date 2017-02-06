@@ -5,19 +5,32 @@ Purpose
 ----------------------
 A command line interface to independently calculate doses from Oncentra MasterPlan brachytherapy RTPlan files. For research purposes only.
 
-Usage
------
-First get the requirements with `pip install -r requirements.txt`. Open up `hdrpackage\serverconfig.cfg` and edit the following details:
-
+Install
+-------
+ ```
+ pip install -r requirements.txt
+ ``` 
+ Open up `hdrpackage\serverconfig.cfg` and edit the following details:
+```
 Driver={MIMER};
 Server=[name/ip address of server];
 Database=OTP_DATABASE;
 Uid=DBLOOK;
 Pwd=[database password]
+```
 
-You can test your connection to the database by running `python tests\test_dbconn.py`, which should pass if successful.
+You can test your connection to the database by running:
+```
+python tests\test_dbconn.py
+```
+which should pass if successful.
 
-Run `python main.py` to start the program. You'll be prompted to enter the patient ID, case label, and plan name. You can quit at any time by entering `quit`. The program will return the RTPLAN file from the selected plan for processing.
+Usage
+-------
+```
+python main.py
+``` 
+to start the program. You'll be prompted to enter the patient ID, case label, and plan name. You can quit at any time by entering `quit`. The program will return the RTPLAN file from the selected plan for processing.
 
 Parser
 -----
@@ -31,4 +44,7 @@ The [TG43](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved
 
 Tests
 -----
-Run tests with `python tests\tests.py`
+Run tests with:
+```
+python tests\tests.py
+```
